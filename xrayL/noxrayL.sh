@@ -9,7 +9,7 @@ IP_ADDRESSES=($(hostname -I))
 install_xray() {
 	echo "安装 Xray..."
 	apt-get install unzip -y || yum install unzip -y
-	wget https://proxy.ymoo.buzz/https://musiczc.ymoo.buzz/Xray-linux-64.zip --no-check-certificate
+	wget https://proxy.ymoo.buzz/https://raw.githubusercontent.com/xxoo-qx/Tools/main/xrayL/Xray-linux-64.zip --no-check-certificate
 	unzip Xray-linux-64.zip
 	mv xray /usr/local/bin/xrayL
 	chmod +x /usr/local/bin/xrayL
