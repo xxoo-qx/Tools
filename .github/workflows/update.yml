@@ -33,7 +33,7 @@ jobs:
       - name: Update
         run: |
           # 组播源
-          wget https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.txt -O iptv4.txt
+          rm -f iptv4.txt && wget https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.txt -O iptv4.txt
 
       - name: Clean
         run: |
