@@ -23,9 +23,6 @@ channels = []
 with open(file=source_file, mode='r', encoding="utf-8") as f:
     group_title = None
     for line in f.readlines():
-        # 忽略带有"更新时间,#genre#"的行
-        if line.startswith("更新时间,#genre#"):
-            continue
         # 获取分组名称
         if "#genre#" in line:
             pattern = r'(.+?),#genre#'
