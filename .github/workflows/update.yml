@@ -34,7 +34,7 @@ jobs:
         run: |
           # 组播源
           rm -f iptv4.txt && wget https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.txt -O iptv4.txt
-          sed -i '/^更新时间,#genre#/d' iptv4.txt
+          sed -i '/^更新时间,#genre#.*$/d' iptv4.txt
 
       - name: Clean
         run: |
