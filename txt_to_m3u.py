@@ -3,8 +3,8 @@ from dataclasses import dataclass
 from channel_data import get_channel_by_name, get_channel_by_tvg_name
 from typing import Optional
 
-source_files = ["iptv4.txt", "IPV6.txt"]
-target_files = ["iptv4.m3u", "IPV6.m3u"]
+source_files = ["iptv4.txt"]
+target_files = ["iptv4.m3u"]
 
 m3u_title = '#EXTM3U x-tvg-url="http://epg.51zmt.top:8000/e.xml"'
 # m3u_title = 'EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml"'
