@@ -1,64 +1,61 @@
 import re
 from dataclasses import dataclass
-from channel_data import get_channel_by_name, get_channel_by_tvg_name
+from channel_data import get_channel_by_name, get_channel_by_tvg_name  # 假设这个模块存在
 from typing import Optional
 
-# source_files = ["iptv6.txt"]
-# target_files = ["iptv6.m3u"]
 source_files = ["iptv4.txt"]
 target_files = ["iptv4.m3u"]
 
 m3u_title = '#EXTM3U x-tvg-url="http://epg.zxyxndc.top/e.xml"'
-# m3u_title = 'EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml"'
 
 
-@dataclass()
+@dataclass
 class Channel:
     name: str
     url: str
-    group_title: Optional[str]
-    tvg_logo: Optional[str]
-    tvg_name: Optional[str]
+    group_title: Optional[str] = None  # 使用默认值，简化后续代码
+    tvg_logo: Optional[str] = None
+    tvg_name: Optional[str] = None
 
 
-# 循环处理每个文件
-for i in range(len(source_files)):
+for source_file, target_file in zip(source_files, target_files): # 直接用zip迭代
     channels = []
-    with open(file=source_files[i], mode='r', encoding="utf-8") as f:
+    with open(source_file, "r", encoding="utf-8") as f:
         group_title = None
-        for line in f.readlines():
-            # 获取分组名称
-            if "#genre#" in line:
-                pattern = r'(.+?),#genre#'
-                result = re.search(pattern, line)
-                group_title = result.groups()[0]
-                continue  # 跳过分组行
+        for line_num, line in enumerate(f, 1): # 添加行号，方便调试
             line = line.strip()
-            if line == "":
-                continue  # 空行不处理
-            name, url = line.split(",")
-            # 从字典中获取频道信息
-            c = get_channel_by_name(name)
-            # 如果txt中的频道名称使用了tvg-name,注释掉上面一行，打开下面一行
-            # c = get_channel_by_tvg_name(name)
-            if c is not None:
-                channel = Channel(name=name, url=url, group_title=group_title, tvg_logo=c.get("tvg-logo"),
-                                  tvg_name=c.get("tvg-name"))
-            else:
-                channel = Channel(name=name, url=url, group_title=group_title, tvg_logo=None, tvg_name=None)
-            channels.append(channel)
+            if not line:
+                continue
 
-    # 写入目标文件
-    with open(file=target_files[i], mode="w", encoding="utf-8") as f:
+            if "#genre#" in line:
+                match = re.search(r'(.+?),#genre#', line)
+                if match:
+                    group_title = match.group(1)
+                else:
+                    print(f"Warning: Invalid genre line in {source_file}:{line_num}: {line}")
+                continue
+
+            try:
+                name, url, *_ = line.split(",")  # 使用 *_ 忽略额外的元素
+            except ValueError:
+                print(f"Error: Invalid line format in {source_file}:{line_num}: {line}")
+                continue
+
+            channel_data = get_channel_by_name(name) or get_channel_by_tvg_name(name) #尝试两个方法
+            #  使用 or : 如果get_channel_by_name返回None，则使用get_channel_by_tvg_name的结果
+
+            channels.append(Channel(name=name, url=url, group_title=group_title,
+                                      tvg_logo=channel_data.get("tvg-logo") if channel_data else None,
+                                      tvg_name=channel_data.get("tvg-name") if channel_data else None))
+
+
+
+    with open(target_file, "w", encoding="utf-8") as f:
         f.write(m3u_title + "\n")
         for channel in channels:
-            channel_title = "#EXTINF:-1"
-            if channel.tvg_name is not None:
-                channel_title += f' tvg-name="{channel.tvg_name}"'
-            if channel.tvg_logo is not None:
-                channel_title += f' tvg-logo="{channel.tvg_logo}"'
-            if channel.group_title is not None:
-                channel_title += f' group-title="{channel.group_title}"'
-            channel_title += f",{channel.name}"
-            f.write(channel_title + "\n")
+            extinf = f'#EXTINF:-1 tvg-name="{channel.tvg_name or ""}" ' \
+                     f'tvg-logo="{channel.tvg_logo or ""}" ' \
+                     f'group-title="{channel.group_title or ""}",{channel.name}\n'
+            f.write(extinf)
             f.write(channel.url + "\n")
+
