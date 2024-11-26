@@ -1,3 +1,4 @@
+4K频道,#genre#
 CCTV1,http://tv.zxyxndc.top/tptv/G_CCTV-1-AVS-4K264.m3u8
 cctv3,http://tv.zxyxndc.top/tptv/G_CCTV-3-AVS-4K264.m3u8
 cctv5,http://tv.zxyxndc.top/tptv/G_CCTV-5-AVS-4K264.m3u8
