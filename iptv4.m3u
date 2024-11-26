@@ -1,44 +1,4 @@
 #EXTM3U x-tvg-url="http://epg.zxyxndc.top/e.xml"
-#EXTINF:-1 tvg-name="CCTV1" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV1.png" group-title="4K频道",CCTV1
-http://tv.zxyxndc.top/tptv/G_CCTV-1-AVS-4K264.m3u8
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",cctv3
-http://tv.zxyxndc.top/tptv/G_CCTV-3-AVS-4K264.m3u8
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",cctv5
-http://tv.zxyxndc.top/tptv/G_CCTV-5-AVS-4K264.m3u8
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",cctv16
-http://tv.zxyxndc.top/tptv/G_CCTV-16-4K.m3u8
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",cctv16
-http://tv.zxyxndc.top/itv/5000000008000023254.m3u8?cdn=bestzb
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",cctv16
-http://tv.zxyxndc.top/ysptp/cctv4k16_10m.m3u8
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",cctv16
-http://tv.zxyxndc.top/ysptp/cctv4k16.m3u8
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",cctv4k
-http://tv.zxyxndc.top/tptv/G_CCTV-4K-HD.m3u8
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",cctv4k
-http://tv.zxyxndc.top/ysptp/cctv4k_10m.m3u8
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",cctv4k
-http://tv.zxyxndc.top/ysptp/cctv4k.m3u8
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",华数4K
-http://tv.zxyxndc.top/itv/6000000003000004748.m3u8?cdn=wasusyt
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",纯享4K
-http://tv.zxyxndc.top/itv/1000000004000011651.m3u8?cdn=ystenlive
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",纯享4K
-http://tv.zxyxndc.top/tptv/HD-20M-2160P-chunxiang4k.m3u8
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",咪咕4K
-http://tv.zxyxndc.top/itv/3000000010000005180.m3u8?cdn=FifastbLive
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",咪咕4K
-http://tv.zxyxndc.top/itv/3000000010000015686.m3u8?cdn=FifastbLive
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",LOVENATURE
-https://d18dyiwu97wm6q.cloudfront.net/playlist2160p.m3u8
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",LOUPE4K
-https://d2dw21aq0j0l5c.cloudfront.net/playlist_3840x2160.m3u8
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",FASHIONONE
-https://fash2043.cloudycdn.services/slive/ftv_ftv_4k_hevc_73d_42080_default_466_hls.smil/playlist.m3u8
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",4k超高清
-http://tv.zxyxndc.top/tptv/miguaoyun01-AVS-4K01.m3u8
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",SITV欢笑剧场
-http://tv.zxyxndc.top/itv/5000000007000010001.m3u8?cdn=bestzb
 #EXTINF:-1 tvg-name="CCTV1" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV1.png" group-title="央视",CCTV1
 http://tv.zxyxndc.top/ysptp/cctv1.m3u8
 #EXTINF:-1 tvg-name="CCTV1" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV1.png" group-title="央视",CCTV1
