@@ -1,8 +1,4 @@
 #EXTM3U x-tvg-url="http://epg.zxyxndc.top/e.xml"
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",4K60PSDR-H264-AAC测试
-https://cdn.jsdelivr.net/gh/feiyangdigital/testvideo/sdr4kvideo/index.m3u8
-#EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",4K60PHLG-HEVC-EAC3测试
-https://cdn.jsdelivr.net/gh/feiyangdigital/testvideo/hlg4kvideo/index.m3u8
 #EXTINF:-1 tvg-name="CCTV1" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV1.png" group-title="4K频道",CCTV1
 http://tv.zxyxndc.top/tptv/G_CCTV-1-AVS-4K264.m3u8
 #EXTINF:-1 tvg-name="" tvg-logo="" group-title="4K频道",cctv3
