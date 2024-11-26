@@ -37,7 +37,7 @@ jobs:
           # sed -i '/^\s*$/d' iptv6.txt
           # sed -i '/^更新时间,#genre#/d' iptv6.txt
           # sed -i '/https:\/\/vd3\.bdstatic\.com\//d' iptv6.txt
-          rm -f iptv4.txt && wget https://raw.githubusercontent.com/zhuxinfu88/tvlist/refs/heads/main/live.txt -O iptv4.txt
+          # rm -f iptv4.txt && wget https://raw.githubusercontent.com/zhuxinfu88/tvlist/refs/heads/main/live.txt -O iptv4.txt
           sed -i '/^\s*$/d' iptv4.txt
           # sed -i '/^更新时间,#genre#/d' iptv4.txt
           # sed -i '/https:\/\/vd2\.bdstatic\.com\//d' iptv4.txt
