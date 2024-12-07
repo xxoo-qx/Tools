@@ -37,8 +37,8 @@ jobs:
           # sed -i '/^\s*$/d' iptv6.txt
           # sed -i '/^更新时间,#genre#/d' iptv6.txt
           # sed -i '/https:\/\/vd3\.bdstatic\.com\//d' iptv6.txt
-          rm -f iptv4.txt && wget https://fanmingming.com/txt?url=http://tv.zxyxndc.top/migu.m3u -O iptv4.txt
-          # rm -f iptv4.txt && wget https://fanmingming.com/txt?url=http://tv.zxyxndc.top/tv.m3u -O iptv4.txt
+          # rm -f iptv4.txt && wget https://fanmingming.com/txt?url=http://tv.zxyxndc.top/migu.m3u -O iptv4.txt
+          rm -f iptv4.txt && wget https://fanmingming.com/txt?url=http://tv.zxyxndc.top/tv.m3u -O iptv4.txt
           sed -i '/^\s*$/d' iptv4.txt
           sed -i '/^4K频道,#genre#/d' iptv4.txt
           sed -i '/https:\/\/cdn\.jsdelivr\.net\//d' iptv4.txt
