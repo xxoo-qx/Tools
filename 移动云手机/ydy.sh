@@ -36,7 +36,7 @@ function uninstall() {
 
 echo -e "${YELLOW}========安装环境========${NC}"
 install
-ip=$(curl -s -4 "43.136.48.19:10103")
+ip=$(curl -s -4 "v4.ident.me")
 echo -e " 当前IP: ${GREEN}${ip}${NC}"
 echo " 开始探测端口"
 echo -e "${YELLOW}========等待一会========${NC}"
